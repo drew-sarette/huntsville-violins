@@ -1,0 +1,19 @@
+<nav aria-label="Change page" class="paginated-nav">
+  <ol role="list" class="paginated-nav__list">
+    {% if page.url != pagination.href.first %}
+      <li class="paginated-nav__li">
+        <a class="paginated-nav__a" href="{{ pagination.href.first }}">First</a>
+      </li>
+    {% endif %}
+    {%- for pageEntry in pagination.pages %}
+      <li class="paginated-nav__li">
+        <a class="paginated-nav__a" href="{{ pagination.hrefs[ loop.index0 ] }}" {% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page" {% endif %}>{{ loop.index }}</a>
+      </li>
+    {%- endfor %}
+    {% if page.url != pagination.href.last %}
+      <li class="paginated-nav__li">
+        <a class="paginated-nav__a" href="{{ pagination.href.last }}">Last</a>
+      </li>
+    {% endif %}
+  </ol>
+</nav>

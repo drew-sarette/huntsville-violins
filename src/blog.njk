@@ -1,0 +1,17 @@
+---
+title: blog
+layout: 'layouts/base.njk'
+pagination:
+  data: collections.blog
+  size: 10
+  reverse: true
+---
+
+<h1>{{ title }}</h1>
+<p>This is where I post tutorials on pieces I teach, arrangements I have made, personal projects, and performances.</p>
+<ul role="list" class="stack" data-pagefind-ignore >
+    {% for post in pagination.items %}
+        {% include "partials/snippet.njk" %}
+    {% endfor %}
+</ul>
+{% include "partials/paginated-nav.njk" %}

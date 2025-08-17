@@ -1,0 +1,5 @@
+{
+    "tags": "lessons",
+    "author": "Drew Sarette",
+    "layout": "layouts/lessons.njk"
+}

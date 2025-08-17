@@ -1,0 +1,16 @@
+<header class="page-header">
+  <input type="checkbox" name="hidden-checkbox" id="hidden-checkbox">
+    <div class="page-header__flex-wrapper">
+      <a href="/" title="Home" tabindex="-1">
+        {% include "svg/logo.njk"%}
+      </a>
+      <button class="main-menu-btn" aria-label="main menu">
+        <label class="main-menu-btn__label" for="hidden-checkbox" >
+          {% include "svg/violin.njk" %}
+          {% include "svg/bow.njk" %}
+          <span class="main-menu-btn__span">menu</span>
+        </label>
+      </button>
+    </div>
+    {% include "partials/nav.njk" %}
+  </header>
