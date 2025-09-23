@@ -33,19 +33,11 @@
       href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <a href="#main-content" id="skip-to-main">Skip to main content</a>
     <header class="top-nav">
-      <img src="assets/img/logo.png" alt="" />
+      <img src="assets/img/logo.avif" alt="" />
       <nav>
         <ul class="menu" role="list">
           <li><a href="/" aria-current="page">home</a></li>
@@ -78,19 +70,18 @@
       </section>
 
       <section class="hours">
-        <h2>Open Hours</h2>
-        <p>Monday - Sunday: 10am - 6pm</p>
-        <p>Very flexible hours, but please call ahead.</p>
-      </section>
+        <div>
+          <h2>Visit Us</h2>
+          <p>Monday - Sunday: 10am - 6pm</p>
+          <p>Very flexible hours, but please <a href="tel:+12568812863">call</a> ahead.</p>
 
-      <section class="media">
-        <h2>Demos</h2>
-        <ul>
-          <li>Jay Unger and Molly Mason</li>
-          <li>2016 St. Patrick's Day Parade</li>
-          <li>Mark and Maggie O'Connor</li>
-          <li>Celtic fiddle</li>
-        </ul>
+        </div>
+        <a
+          href="https://duckduckgo.com/?t=ffab&q=huntsville%20violins&iaxm=maps&bbox=15.601426704765501%2C5.852200581065606%2C15.610939295234473%2C5.843217428224396"
+          ><img
+            src="./assets/img/hsv-violins-map.avif"
+            alt="Map shows Huntsville Violins located on Charlotte Ave off of Memorial Parkway"
+        />7920 Charlotte Dr SW <br>Ste D <br>Huntsville, AL 35802</a>
       </section>
 
       <section class="featured">
@@ -187,9 +178,21 @@
           </ul>
         </div>
       </section>
+
+      <section class="media">
+        <h2>Demos</h2>
+        <ul>
+          <li>Jay Unger and Molly Mason</li>
+          <li>2016 St. Patrick's Day Parade</li>
+          <li>Mark and Maggie O'Connor</li>
+          <li>Celtic fiddle</li>
+        </ul>
+      </section>
     </main>
     <footer>
-      &copy; <span class="currentyear">2025</span> Huntsville Violins
+      <div>&copy; <span class="currentyear">2025</span> Huntsville Violins</div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="accessibility.html">Accessibilty Statement</a>
     </footer>
   </body>
 </html>

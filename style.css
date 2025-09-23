@@ -1,3 +1,28 @@
+/* Fonts */
+@font-face {
+    font-family: "ParisineClair";
+    src:
+        url("assets/fonts/ParisineClair Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "MacondoSwashCaps";
+    src:
+        url("assets/fonts/MacondoSwashCaps-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Didot";
+    src:
+        url("assets/fonts/GFSDidot-Regular.ttf") format("truetype");
+}
+
+/* @font-face {
+    font-family: "NotoSerifHentaigana";
+    src:
+        url("assets/fonts/NotoSerifHentaigana-VariableFont_wght.ttf") format("truetype");
+} */
+
 :root {
     --ratio: 1.25;
     --s-5: calc(var(--s-4) / var(--ratio));
@@ -12,8 +37,9 @@
     --s4: calc(var(--s3) * var(--ratio));
     --s5: calc(var(--s4) * var(--ratio));
 
-    --ff-heading: "Macondo Swash Caps", cursive;
-    --ff-body: Arial, Helvetica, system-ui, sans-serif;
+    --ff-heading: Didot, serif;
+    --ff-h1: MacondoSwashCaps, Arial, Helvetica, system-ui, sans-serif;
+    --ff-body: ParisineClair, Arial, Helvetica, system-ui, sans-serif;
 
     --bg-1: #061e20;
     --text-1: #cdb789;
@@ -97,6 +123,16 @@ body {
     font-size: 16px;
 }
 
+a,
+a:visited {
+    color: var(--text-1);
+}
+
+a:hover,
+a:active {
+    color: var(--highlight-1);
+}
+
 h1,
 h2,
 h3,
@@ -148,21 +184,32 @@ header a[aria-current="page"] {
 }
 
 header ul {
-    display:flex;
+    display: flex;
     gap: 2rem;
     margin-right: 2rem;
 }
 
 /* Intro Section */
+section {
+    margin: 0 2rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+.intro {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
 .fw-bg-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/assets/img/top-banner.avif');
+        url('/assets/img/top-banner.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -175,6 +222,7 @@ main {
 
 h1 {
     color: whitesmoke;
+    font-family: var(--ff-h1);
     font-weight: 400;
     font-style: normal;
     font-size: var(--s5);
@@ -189,7 +237,27 @@ h1 {
     text-align: center;
 }
 
-
-@media (min-width: 700px) {
-   
+/* Visit Us */
+.hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+.hours a {
+    align-self: center;
+}
+.hours img {
+    border-radius: 1rem;
+    width: 95%;
+}
+
+
+/* Footer */
+footer {
+    font-size: var(--s-1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 700px) {}
