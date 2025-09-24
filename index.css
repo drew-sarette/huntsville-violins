@@ -48,6 +48,10 @@ h1 {
 }
 
 /* Services */
+.services {
+    background-color: #FDF0D5;
+    color: var(--bg-1)
+}
 .services ul {
     margin-bottom: 0;
 }
@@ -59,16 +63,25 @@ h1 {
     gap: 1rem;
 }
 
-.visit-us img {
+.visit-us a {
     align-self: center;
+
+}
+
+.visit-us img {
+
     border-radius: 1rem;
-    width: 100%;
+    width: 350px;
 }
 
 /* Featured Instruments */
 .featured {
     background-color: var(--bg-2);
-    color:var(--text-2);
+    color:var(--text-1);
+}
+
+.featured h2 {
+    color:var(--bg-1);
 }
 .cards-container {
     display: flex;
@@ -81,7 +94,8 @@ h1 {
     margin: 1rem;
     max-width: 323px;
     text-align: center;
-    border-radius: 0; 
+padding: 1rem;
+border-radius: .5rem;
 }
 
 .featured .card-title {
@@ -96,7 +110,7 @@ h1 {
 
 .featured .card-image {
     width: 100%;
-    height: fit-content;
+    height: auto;
     border-radius: 0;
 }
 
