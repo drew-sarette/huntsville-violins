@@ -13,6 +13,10 @@
     <!-- CSS and JS -->
     <link rel="stylesheet" href="site.css" />
     <link rel="stylesheet" href="index.css" />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace.js"
+    ></script>
     <script src="index.js" defer></script>
 
     <!-- Favicon -->
@@ -147,12 +151,58 @@
 
       <section class="media">
         <h2>Demos</h2>
-        <ul>
-          <li>Jay Unger and Molly Mason</li>
-          <li>2016 St. Patrick's Day Parade</li>
-          <li>Mark and Maggie O'Connor</li>
-          <li>Celtic fiddle</li>
-        </ul>
+        <sl-carousel navigation loop>
+          <sl-carousel-item>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/jRyMH_4PO3Y?si=bpOKpK2ZYPbyIwgf"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </sl-carousel-item>
+          <sl-carousel-item>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/YTsZu_BiWyI?si=hekJQvzv0cTDlGE2"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </sl-carousel-item>
+          <sl-carousel-item>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/nZDTk4z2aK4?si=zIb7CJUgPJ0pgoWX"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </sl-carousel-item>
+          <sl-carousel-item>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/URKiYAvHX6I?si=G09FxYkYp5N5q-Gx"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </sl-carousel-item>
+          <sl-carousel-item
+            ><iframe
+              src="https://www.youtube-nocookie.com/embed/6KX7H2zBurA?si=hSHeugh5kTgXqtKi"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe
+          ></sl-carousel-item>
+        </sl-carousel>
       </section>
     </main>
     <footer>

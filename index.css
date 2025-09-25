@@ -49,8 +49,11 @@ h1 {
 
 /* Services */
 .services {
-    background-color: #FDF0D5;
-    color: var(--bg-1)
+    background-color: #FFFAE3;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .services ul {
     margin-bottom: 0;
@@ -61,15 +64,10 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-.visit-us a {
-    align-self: center;
-
+    align-items: center;
 }
 
 .visit-us img {
-
     border-radius: 1rem;
     width: 350px;
 }
@@ -113,5 +111,12 @@ border-radius: .5rem;
     height: auto;
     border-radius: 0;
 }
+
+/* Demos */
+.media iframe {
+    width: 290;
+    height: auto;
+}
+
 
 @media (min-width: 700px) {}
