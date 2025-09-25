@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <a href="#main-content" id="skip-to-main">Skip to main content</a>
+    <header class="top-nav">
+      <img src="assets/img/logo.avif" alt="" />
+      <nav>
+        <ul class="menu" role="list">
+          <li><a href="/">home</a></li>
+          <li><a href="contact.html" aria-current="page">contact</a></li>
+          <li><a href="lessons.html">lessons</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+    <h1>Contact Us</h1>
+    <p>
+      Please use the form below to get in touch with me. I'll do my best to get
+      back to you as soon as possible.
+    </p>
+    <form
+      action="/submit-form"
+      method="post"
+      class="contact-form stack"
+      data-netlify-recaptcha="true"
+      netlify
+    >
+      <label class="contact-form-child" for="name"
+        >Name:
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="full name"
+          required
+        />
+      </label>
+      <label class="contact-form-child" for="email"
+        >Email:
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="abc@email.com"
+          required
+        />
+      </label>
+      <label class="contact-form-child" for="phone"
+        >Phone (optional):
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="(555) 555-5555"
+        />
+      </label>
+      <label class="contact-form-child" for="message"
+        >Message:
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter your message here"
+          rows="5"
+          required
+        ></textarea>
+      </label>
+      <div data-netlify-recaptcha="true"></div>
+      <button class="contact-form-child btn-primary" type="submit">
+        Submit
+      </button>
+    </form>
+    </main>
+    <footer>
+        <div>&copy; <span class="currentyear">2025</span> Huntsville Violins</div>
+        <!-- <a href="privacy.html">Privacy Policy</a> -->
+        <a href="accessibility.html">Accessibilty Statement</a>
+      </footer>
+    <script>
+      const phone = document.getElementById("phone");
+      phone.addEventListener("keypress", function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (/^[0-9]$/.test(ev.key)) {
+          const numericString = phone.value.replace(/[^0-9]/g, "") + ev.key;
+          const arr = Array.from(numericString);
+          let result = "";
+          for (let i = 0; i < arr.length && i < 10; i++) {
+            if (i === 0) {
+              result = "(";
+            } else if (i === 3) {
+              result += ") ";
+            } else if (i === 6) {
+              result += "-";
+            }
+            result += arr[i];
+          }
+          phone.value = result;
+        }
+      });
+    </script>
+  </body>
+</html>
