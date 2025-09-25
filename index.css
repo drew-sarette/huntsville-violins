@@ -1,18 +1,22 @@
 main section {
     padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 3rem 0;
 }
+
 
 section h2 {
     text-align: center;
+    margin-bottom: 16px;
 }
 
 /* Intro Section */
 
 .intro {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+    padding: 0 0 3rem 0;
 }
 
 .fw-bg-image {
@@ -21,7 +25,8 @@ section h2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    width:100%;
+    max-width: 100% ;
     min-height: 200px;
     display: flex;
     justify-content: center;
@@ -41,7 +46,6 @@ h1 {
 .intro p {
     max-width: 70ch;
     margin: 1em;
-    align-self: center;
     text-align: center;
 }
 
@@ -49,21 +53,15 @@ h1 {
 .services {
     background-color: var(--bg-2);
     color: var(--bg-1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Visit Us */
 .visit-us {
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
-    align-items: center;
 }
 
 .visit-us img {
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
 }
 
 /* Featured Instruments */
@@ -88,7 +86,7 @@ h1 {
     max-width: 323px;
     text-align: center;
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: var(--border-radius);
 }
 
 .featured .card-title {
@@ -107,5 +105,26 @@ h1 {
     border-radius: 0;
 }
 
+.media .cards-container {
+    display:none;
+}
 
-@media (min-width: 700px) {}
+.media .carousel {
+    height: 200px;
+}
+
+
+@media (min-width: 700px) {
+    .featured .cards-container {
+        flex-direction: row;
+    }
+
+
+
+    .media .carousel {
+        display: none;
+    }
+    .media .cards-container {
+        display: block;
+    }
+}
