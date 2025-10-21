@@ -1,22 +1,29 @@
-main section {
-    padding: 1.5em;
+section {
     display: flex;
     flex-direction: column;
+    padding: 3em;
     align-items: center;
-    margin: 0;
-    padding: 3rem 0;
+    gap: 1em;
 }
 
+section > * {
+    width: 300px;
+}
 
-section h2 {
+h1, h2 {
     text-align: center;
-    margin-bottom: 16px;
+}
+
+main > :nth-child(even) {
+    background-color: var(--bg-2);
+    color: var(--bg-1);
 }
 
 /* Intro Section */
 
 .intro {
     padding: 0 0 3rem 0;
+    gap: 2em;
 }
 
 .fw-bg-image {
@@ -25,7 +32,7 @@ section h2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width:100%;
+    width: 100% !important;
     max-width: 100% ;
     min-height: 200px;
     display: flex;
@@ -40,35 +47,22 @@ h1 {
     font-style: normal;
     font-size: var(--s5);
     line-height: var(--s5);
-    text-align: center;
-}
-
-.intro p {
-    max-width: 70ch;
-    margin: 1em;
-    text-align: center;
 }
 
 /* Services */
-.services {
-    background-color: var(--bg-2);
-    color: var(--bg-1);
+.services > ul {
+    list-style: disc;
+    list-style-position: inside;
 }
 
 /* Visit Us */
-.visit-us {
-    gap: 1rem;
-}
-
-.visit-us img {
-    border-radius: var(--border-radius);
+.visit-us > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 /* Featured Instruments */
-.featured {
-    background-color: var(--bg-2);
-    color: var(--text-1);
-}
 
 .featured h2 {
     color: var(--bg-1);
@@ -81,6 +75,7 @@ h1 {
 }
 
 .featured .card {
+    color: var(--text-1);
     background: var(--bg-1);
     margin: 1rem;
     max-width: 323px;
@@ -115,16 +110,73 @@ h1 {
 
 
 @media (min-width: 700px) {
-    .featured .cards-container {
-        flex-direction: row;
+    h1 {
+        font-size: 72px;
     }
 
+    h2 {
+        font-size: 40px;
+    }
 
+    body {
+        font-size: 20px;
+    }
+
+    section > * {
+        width: 650px;
+    }
+
+    .services {
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .services > * {
+        width: 300px;
+    }
+
+    .visit-us {
+        gap: 3em;
+    }
+    .visit-us > div {
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .visit-us > div > * {
+        width: 300px;
+    }
 
     .media .carousel {
         display: none;
     }
     .media .cards-container {
         display: block;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    section > * {
+        width: 900px;
+    }
+
+    .services > * {
+        width: 425px;
+    }
+
+    .visit-us {
+        gap: 3em;
+    }
+
+    .visit-us > div > * {
+        width: 425px;
+    }
+
+   .cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
