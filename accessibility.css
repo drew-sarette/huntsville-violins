@@ -5,5 +5,9 @@ h1 {
 }
 
 h2 {
- margin-top: 1rem;
+    margin-top: 1rem;
+}
+
+main {
+    padding: 3em;
 }

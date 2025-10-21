@@ -96,5 +96,12 @@
       <!-- <a href="privacy.html">Privacy Policy</a> -->
       <a href="accessibility.html">Accessibilty Statement</a>
     </footer>
+    <script>
+      if (Math.random() >= .5) {
+        const main = document.querySelector("main")
+        const chip = main.removeChild(document.querySelector(".chip"));
+        main.appendChild(chip);
+      }
+    </script>
   </body>
 </html>
