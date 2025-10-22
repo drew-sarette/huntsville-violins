@@ -62,6 +62,10 @@ h1 {
     gap: 1em;
 }
 
+.visit-us img {
+    border-radius: var(--border-radius);
+}
+
 /* Featured Instruments */
 
 .featured h2 {
